@@ -9,7 +9,6 @@ var uuid 	= require('node-uuid');
 var crypto 	= require('crypto');
 var biguint = require('biguint-format');
 var format  = require('date-format');
-require('x-date'); 
 
 module.exports = {
 	
