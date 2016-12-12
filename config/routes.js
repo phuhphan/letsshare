@@ -32,9 +32,18 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  //User GET method
+  'GET /user/detail/:user_id/:session_id'               : 'UserController.detail',
+  'GET /user/check_email_verify_code/:code/:session_id' : 'UserController.check_email_verify_code',
+  'GET /user/check_phone_verify_code/:code/:session_id' : 'UserController.check_phone_verify_code',
+
+  //Space GET method
+  'GET /space/list/:limited/:user_id/:page/:session_id' : 'SpaceController.list',
+  'GET /space/detail/:space_id/:session_id'             : 'SpaceController.detail',
+
+  //Favorite GET method
+  'GET /favorite/list/:limited/:page/:session_id'       : 'FavoriteController.list',
+  'GET /favorite/:type/:space_id/:session_id'           : 'FavoriteController.modify',
 
   /***************************************************************************
   *                                                                          *
