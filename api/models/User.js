@@ -101,6 +101,10 @@ module.exports = {
           collection: 'Favorite',
           via: 'user'
         },
+        reviews: {
+          collection: 'Review',
+          via: 'user_id'
+        },
     }
 };
 

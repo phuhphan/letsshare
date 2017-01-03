@@ -33,17 +33,26 @@ module.exports.routes = {
   ***************************************************************************/
 
   //User GET method
-  'GET /user/detail/:user_id/:session_id'               : 'UserController.detail',
-  'GET /user/check_email_verify_code/:code/:session_id' : 'UserController.check_email_verify_code',
-  'GET /user/check_phone_verify_code/:code/:session_id' : 'UserController.check_phone_verify_code',
+  'GET /user/detail/:user_id/:session_id'                         : 'UserController.detail',
+  'GET /user/check_email_verify_code/:code/:session_id'           : 'UserController.check_email_verify_code',
+  'GET /user/check_phone_verify_code/:code/:session_id'           : 'UserController.check_phone_verify_code',
 
   //Space GET method
-  'GET /space/list/:limited/:user_id/:page/:session_id' : 'SpaceController.list',
-  'GET /space/detail/:space_id/:session_id'             : 'SpaceController.detail',
+  'GET /space/list/:limited/:user_id/:page/:session_id'           : 'SpaceController.list',
+  'GET /space/detail/:space_id/:session_id'                       : 'SpaceController.detail',
 
   //Favorite GET method
-  'GET /favorite/list/:limited/:page/:session_id'       : 'FavoriteController.list',
-  'GET /favorite/:type/:space_id/:session_id'           : 'FavoriteController.modify',
+  'GET /favorite/list/:limited/:page/:session_id'                 : 'FavoriteController.list',
+  'GET /favorite/:type/:space_id/:session_id'                     : 'FavoriteController.modify',
+
+  //Transaction GET method
+  'GET /transaction/all/booking/:page/:limited/:session_id'       : 'TransactionController.listBooking',
+  'GET /transaction/all/share/:page/:limited/:session_id'         : 'TransactionController.listShare',
+  'GET /transaction/detail/:transaction_id/:session_id'           : 'TransactionController.detail',
+
+  //Review GET method
+  'GET /review/all/space/:page/:limited/:space_id/:session_id'    : 'ReviewController.listOfSpace',
+  'GET /review/all/user/:page/:limited/:user_id/:session_id'      : 'ReviewController.listOfUser',
 
   /***************************************************************************
   *                                                                          *

@@ -7,8 +7,40 @@
 
 module.exports = {
 
-  attributes: {
-
-  }
+  	attributes: {
+	  	autoCreatedAt: false,
+	    autoUpdatedAt: false,
+	    tableName : 'reviews',
+	    attributes: {
+	        review_id: {
+	            type			: 'string',
+	            columnName		: 'review_id',
+	            primaryKey      : true,
+	            unique          : true,
+	        },
+	        user_id: {
+		      	model: 'User',
+		    },
+		    space_id: {
+		      	model: 'Space',
+		    },
+	        description: {
+	            type			: 'text',
+	            columnName		: 'description',
+	        },
+	        vote: {
+	            type			: 'integer',
+	            columnName		: 'vote',
+	        },
+	        created: {
+	            type			: 'date',
+	            columnName		: 'created',
+	        },
+	        edited: {
+	            type			: 'date',
+	            columnName		: 'edited',
+	        },
+	    }
+  	}
 };
 

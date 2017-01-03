@@ -45,7 +45,7 @@ module.exports.connections = {
     host: 'localhost',
     user: 'root',
     port: 3306,
-    password: 'CnTbpc67sOpa9',
+    password: '',
     database: 'letsshare' //optional
   },
 

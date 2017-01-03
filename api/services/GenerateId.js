@@ -24,6 +24,12 @@ module.exports = {
         .replace(/\//g, '0'); // replace '/' with '0'
 	},
 
+	reviewId: function(){
+		return crypto.randomBytes(Math.ceil(5))
+        .toString('hex')
+        .slice(0,5) + "-" + format.asString('yyyyMMddhhmmss', new Date());
+	},
+
 	favoriteId: function(){
 		return crypto.randomBytes(Math.ceil(10))
         .toString('hex')

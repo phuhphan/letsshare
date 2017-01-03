@@ -116,5 +116,9 @@ module.exports = {
           collection: 'Favorite',
           via: 'space'
         },
+        reviews: {
+          collection: 'Review',
+          via: 'space_id'
+        },
     },
 };
